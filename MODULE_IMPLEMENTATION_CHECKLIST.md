@@ -1,0 +1,38 @@
+# SPM Implementation Checklist
+
+Use this checklist before coding starts and before each public tag release.
+
+## A. Package Identity
+- [ ] Repository name == package product name == module import name
+- [ ] Stable identifier exists (reverse-domain style)
+- [ ] Product compatibility baseline is documented as iOS 13
+- [ ] `Package.swift` platform is `.iOS(.v15)` by default, or approved `.iOS(.v16)` with downgrade notes
+
+## B. Metadata Self-Management
+- [ ] `ModuleInfo.metadata` is public and directly readable without UI mount
+- [ ] Metadata contains `title/subtitle/logo/category/minimumIOSVersion`
+- [ ] Localized keys exist: `module.title`, `module.subtitle`
+- [ ] `logo` fallback chain works: `logo` -> `logo_placeholder` -> system placeholder
+
+## C. Public Entry and Output
+- [ ] `HomeView` public init includes `headerStyle/qrcode/onCapture/onEvent/controller`
+- [ ] Export image goes through `onCapture?(UIImage)` only (no direct photo-save in kit)
+- [ ] Event output includes required minimum lifecycle/interaction/business/error events
+- [ ] ControlBar icon mapping follows standard symbols (`arrow.counterclockwise`, `square.and.arrow.down`, `slider.horizontal.3`, `play.fill`, `pause.fill`)
+- [ ] ControlBar keeps fixed left-center-right semantic layout
+
+## D. External Control
+- [ ] `ModuleController` supports `reset/applyPreset/setParameter`
+- [ ] Unsupported command is safe and emits `unsupported_command`
+
+## E. External Consumption (Public-ready)
+- [ ] README includes SwiftPM add steps (URL + tag)
+- [ ] README includes metadata read example (`ModuleInfo.metadata`)
+- [ ] README includes event callback example (`onEvent`)
+- [ ] README includes control example (`ModuleController`)
+
+## F. Build and Quality
+- [ ] Build passes on iOS device (`arm64`)
+- [ ] Build passes on iOS simulator (`arm64`, `x86_64`)
+- [ ] Localization minimum exists: `en`, `zh-Hans`
+- [ ] No app-private dependency leaks into public package
