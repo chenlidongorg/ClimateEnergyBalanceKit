@@ -36,3 +36,9 @@ Use this checklist before coding starts and before each public tag release.
 - [ ] Build passes on iOS simulator (`arm64`, `x86_64`)
 - [ ] Localization minimum exists: `en`, `zh-Hans`
 - [ ] No app-private dependency leaks into public package
+
+## G. Mandatory Cascade Package Update Flow
+- [ ] Bottom SPM push is immediately followed by `FunyBoxKit` dependency resolve + lock refresh
+- [ ] `FunyBoxKit` push is immediately followed by App dependency resolve + lock refresh
+- [ ] App `Package.resolved` has latest `funyboxkit` and bottom-kit transitive revisions
+- [ ] No manual package update is required from product owner
