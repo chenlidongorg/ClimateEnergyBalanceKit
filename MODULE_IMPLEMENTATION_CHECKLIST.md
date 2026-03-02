@@ -18,7 +18,7 @@ Use this checklist before coding starts and before each public tag release.
 - [ ] `HomeView` public init includes `headerStyle/qrcode/onCapture/onEvent/controller`
 - [ ] Export image goes through `onCapture?(UIImage)` only (no direct photo-save in kit)
 - [ ] Event output includes required minimum lifecycle/interaction/business/error events
-- [ ] ControlBar icon mapping follows standard symbols (`arrow.counterclockwise`, `square.and.arrow.down`, `slider.horizontal.3`, `play.fill`, `pause.fill`)
+- [ ] ControlBar icon mapping follows standard symbols (`arrow.triangle.2.circlepath`, `camera.shutter.button.fill`/`photo.artframe`, `gearshape.fill`, `play`, `pause`)
 - [ ] ControlBar keeps fixed left-center-right semantic layout
 
 ## D. External Control
