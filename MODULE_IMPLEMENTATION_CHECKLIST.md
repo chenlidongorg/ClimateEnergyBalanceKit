@@ -34,7 +34,7 @@ Use this checklist before coding starts and before each public tag release.
 ## F. Build and Quality
 - [ ] Build passes on iOS device (`arm64`)
 - [ ] Build passes on iOS simulator (`arm64`, `x86_64`)
-- [ ] Localization minimum exists: `en`, `zh-Hans`
+- [ ] Localization MVP minimum exists: `en`, `zh-Hans`
 - [ ] No app-private dependency leaks into public package
 
 ## G. Mandatory Cascade Package Update Flow
@@ -42,3 +42,8 @@ Use this checklist before coding starts and before each public tag release.
 - [ ] `FunyBoxKit` push is immediately followed by App dependency resolve + lock refresh
 - [ ] App `Package.resolved` has latest `funyboxkit` and bottom-kit transitive revisions
 - [ ] No manual package update is required from product owner
+
+## H. Localization Rollout Gate
+- [ ] Full localization is not started before explicit command: `支持完整语言`
+- [ ] After `支持完整语言`, language set matches FunyBoxKit baseline (case-insensitive language-code check)
+- [ ] After `支持完整语言`, all required localization keys are complete across all target languages
