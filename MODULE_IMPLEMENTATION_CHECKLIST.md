@@ -17,9 +17,13 @@ Use this checklist before coding starts and before each public tag release.
 ## C. Public Entry and Output
 - [ ] `HomeView` public init includes `headerStyle/qrcode/onCapture/onEvent/controller`
 - [ ] Export image goes through `onCapture?(UIImage)` only (no direct photo-save in kit)
+- [ ] Capture button has success feedback (`checkmark`) and auto-resets to camera icon
 - [ ] Event output includes required minimum lifecycle/interaction/business/error events
 - [ ] ControlBar icon mapping follows standard symbols (`arrow.triangle.2.circlepath`, `camera.shutter.button.fill`/`photo.artframe`, `gearshape.fill`, `play`, `pause`)
 - [ ] ControlBar keeps fixed left-center-right semantic layout
+- [ ] ControlBar action buttons are icon-only and include localized accessibility labels
+- [ ] `play/pause` semantics represent continuous run toggle (not single-step run)
+- [ ] Exposed parameters produce observable result changes
 
 ## D. External Control
 - [ ] `ModuleController` supports `reset/applyPreset/setParameter`
