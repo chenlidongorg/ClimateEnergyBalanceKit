@@ -24,6 +24,8 @@ Use this checklist before coding starts and before each public tag release.
 - [ ] ControlBar action buttons are icon-only and include localized accessibility labels
 - [ ] `play/pause` semantics represent continuous run toggle (not single-step run)
 - [ ] Exposed parameters produce observable result changes
+- [ ] High-frequency parameters stay on main screen; low-frequency parameters go to gear/settings sheet
+- [ ] Main viewport prioritizes visualization area over rarely changed controls
 
 ## D. External Control
 - [ ] `ModuleController` supports `reset/applyPreset/setParameter`
@@ -51,3 +53,4 @@ Use this checklist before coding starts and before each public tag release.
 - [ ] Full localization is not started before explicit command: `支持完整语言`
 - [ ] After `支持完整语言`, language set matches FunyBoxKit baseline (case-insensitive language-code check)
 - [ ] After `支持完整语言`, all required localization keys are complete across all target languages
+- [ ] After `支持完整语言`, non-English locale files are translated into the target language (not English placeholders)
