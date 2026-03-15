@@ -30,31 +30,35 @@ public struct HomeView: View {
         VStack(spacing: 0) {
             ClimateHeaderView(style: headerStyle, qrcode: qrcode)
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    presetCard
-                    quickParameterCard
-                    energyFlowCard
-                    curveCard
-                    metricsCard
-                    explanationCard
+            ZStack(alignment: .bottom) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 16) {
+                        presetCard
+                        quickParameterCard
+                        energyFlowCard
+                        curveCard
+                        metricsCard
+                        explanationCard
+                    }
+                    .padding(16)
+                    .padding(.bottom, 114)
                 }
-                .padding(16)
-            }
 
-            ControlBarView(
-                isRunning: viewModel.isRunning,
-                isCaptureConfirmed: isCaptureConfirmed,
-                onCapture: {
-                    handleCapture()
-                },
-                onToggleRun: {
-                    viewModel.toggleAutoRun()
-                },
-                onReset: {
-                    viewModel.reset()
-                }
-            )
+                ControlBarView(
+                    isRunning: viewModel.isRunning,
+                    isCaptureConfirmed: isCaptureConfirmed,
+                    onCapture: {
+                        handleCapture()
+                    },
+                    onToggleRun: {
+                        viewModel.toggleAutoRun()
+                    },
+                    onReset: {
+                        viewModel.reset()
+                    }
+                )
+                .padding(.bottom, 12)
+            }
         }
         .background(Color(.systemGroupedBackground))
         .sheet(isPresented: $viewModel.isParameterSheetPresented) {
