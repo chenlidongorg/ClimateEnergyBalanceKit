@@ -20,7 +20,6 @@ Goals:
 Each kit must keep metadata and assets in its own package:
 - `Sources/<KitName>/LocalizedInfo.swift`
 - `Sources/<KitName>/Resources/logo.png`
-- `Sources/<KitName>/Resources/logo_placeholder.png`
 - `Sources/<KitName>/Resources/en.lproj/Localizable.strings`
 - `Sources/<KitName>/Resources/zh-Hans.lproj/Localizable.strings`
 
@@ -51,8 +50,7 @@ Rules:
 - `minimumIOSVersion` records the kit implementation target (normally `15.0` or `16.0`), while product baseline remains iOS 13 at app level.
 - `logo` must always return an image:
   - first: `logo`
-  - second: `logo_placeholder`
-  - final: generated system placeholder
+  - second: generated system placeholder
 
 ---
 

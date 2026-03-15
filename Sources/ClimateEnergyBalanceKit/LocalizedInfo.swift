@@ -21,9 +21,6 @@ public enum LocalizedInfo {
         if let image = UIImage(named: "logo", in: .module, with: nil) {
             return image
         }
-        if let placeholder = UIImage(named: "logo_placeholder", in: .module, with: nil) {
-            return placeholder
-        }
         return generatedPlaceholder()
     }
 

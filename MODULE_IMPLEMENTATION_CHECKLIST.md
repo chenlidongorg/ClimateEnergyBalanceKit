@@ -12,7 +12,7 @@ Use this checklist before coding starts and before each public tag release.
 - [ ] `ModuleInfo.metadata` is public and directly readable without UI mount
 - [ ] Metadata contains `title/subtitle/logo/category/minimumIOSVersion`
 - [ ] Localized keys exist: `module.title`, `module.subtitle`
-- [ ] `logo` fallback chain works: `logo` -> `logo_placeholder` -> system placeholder
+- [ ] `logo` fallback chain works: `logo` -> system placeholder
 
 ## C. Public Entry and Output
 - [ ] `HomeView` public init includes `headerStyle/qrcode/onCapture/onEvent/controller`
