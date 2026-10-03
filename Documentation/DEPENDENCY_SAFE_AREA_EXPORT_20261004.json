@@ -1,0 +1,64 @@
+{
+  "repository": "ClimateEnergyBalanceKit",
+  "timestamp": "2026-10-04T06:03:24.882057+08:00",
+  "scope": "DEPENDENCY_ONLY_CHECKPOINT; original science source and native receipts retained; final new-graph runtime pending",
+  "previousHead": "1bb7fb13b68b05fc385011e547e53d8d4140aa08",
+  "previousSharedRevision": "3a1ed5955dc0ad869dcf2aab1f8947028181644e",
+  "sharedRevision": "a8ee5da1c30027d0651d4e5e78b462bd2fa49c56",
+  "manifestBeforeSHA256": "1e3713f8b4075332801a56fe0220c2545760c023cc67953e7e91303a9c74385b",
+  "manifestAfterSHA256": "aad3513da242765d4d6754279ed96a553f767abcd8fa377f95501d895f550f50",
+  "onlyExactImmutableRevisionChanged": true,
+  "actualDumpPackagePassed": true,
+  "minimumPlatformsUnchanged": [
+    {
+      "platform": "iOS",
+      "literal": ".v15"
+    }
+  ],
+  "productionSourcesTestsAndScientificDocsUnchanged": true,
+  "sourcesTestsAggregateSHA256": "dda08295ca9e1f382455d22ba15959855efd394079a395c9fdc573575f497120",
+  "originalScientificReceipt": {
+    "package": "ClimateEnergyBalanceKit",
+    "previousHead": "bfcf7bb649161ce97f9388757f5566749aadc99d",
+    "revision": "1bb7fb13b68b05fc385011e547e53d8d4140aa08",
+    "branch": "feature/science-lab-ui-20261003",
+    "nativePassed": 32,
+    "pushStatus": "pushed",
+    "remoteVerifiedRevision": "1bb7fb13b68b05fc385011e547e53d8d4140aa08"
+  },
+  "originalNativeProof": {
+    "record": "Audit/tests/package-run-20261004-015843-apphosted.json",
+    "recordSHA256": "0ce0e38a6fafa52824ff1361526c8e69bd6a1199789f598cd6a6ec79acae8ecd",
+    "recordIndex": 0,
+    "result": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/ClimateEnergyBalanceKit-apphosted-20261004-015843.xcresult",
+    "log": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/ClimateEnergyBalanceKit-apphosted-20261004-015843.log",
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "xcresultRuntimeWarningCount": 0,
+    "sourceUnchanged": true,
+    "SourcesTestsByteMatchesCurrent": true,
+    "sourceSnapshotCoversAllCurrentSourcesAndTests": true,
+    "nativeCapturedSourcesTestsFileCount": 69,
+    "nativeCapturedSourcesTestsAggregateSHA256": "dda08295ca9e1f382455d22ba15959855efd394079a395c9fdc573575f497120",
+    "nativeManifestSHA256": "1e3713f8b4075332801a56fe0220c2545760c023cc67953e7e91303a9c74385b",
+    "developmentSharedOverride": false,
+    "generatedLockSharedRevisions": [
+      "3a1ed5955dc0ad869dcf2aab1f8947028181644e"
+    ],
+    "nativeSharedCheckouts": [
+      {
+        "path": "/Users/chenlidong/work/apps/sciencetools/Audit/RolloutNativeSourcePackages/checkouts/AppShareKit",
+        "head": "3a1ed5955dc0ad869dcf2aab1f8947028181644e",
+        "status": []
+      }
+    ],
+    "scope": "Existing genuinely executed independent package scientific/native receipt. No new runtime acceptance performed, and not final Shared or Host graph acceptance.",
+    "actualResultExists": true,
+    "actualLogExists": true
+  },
+  "finalSharedNativeProof": "Audit/tests/shared-native65-independent-push-20261004.json",
+  "currentNewDependencyToolNativeAcceptance": "pending genuine final immutable Host71 execution; no new scientific count or acceptance promotion",
+  "existingUntrackedPreserved": [],
+  "lockPolicy": "No lock file edited, generated or staged by this dependency-only checkpoint"
+}

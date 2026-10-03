@@ -14,7 +14,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/chenlidongorg/AppShareKit.git", revision: "3a1ed5955dc0ad869dcf2aab1f8947028181644e")
+        .package(url: "https://github.com/chenlidongorg/AppShareKit.git", revision: "a8ee5da1c30027d0651d4e5e78b462bd2fa49c56")
     ],
     targets: [
         .target(
