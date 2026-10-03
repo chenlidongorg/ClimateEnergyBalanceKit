@@ -1,0 +1,344 @@
+{
+  "package": "ClimateEnergyBalanceKit",
+  "nativeRecord": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/package-run-20261004-015843-apphosted.json",
+  "result": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/ClimateEnergyBalanceKit-apphosted-20261004-015843.xcresult",
+  "log": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/ClimateEnergyBalanceKit-apphosted-20261004-015843.log",
+  "actual32Passed": true,
+  "sourceFreeze": {
+    "count": 70,
+    "sha256": "70b2ba356005d95a50e6fe1a9e9245ce04b57c5a2650445e8b214090b720cedd",
+    "sourceHashes": {
+      "Package.swift": "1e3713f8b4075332801a56fe0220c2545760c023cc67953e7e91303a9c74385b",
+      "Sources/ClimateEnergyBalanceKit/CaptureImageRenderer.swift": "bde6f36973c8071e04a33e1672ed116a09c2de561db578c8437956e192603384",
+      "Sources/ClimateEnergyBalanceKit/ClimateEnergySimulator.swift": "f5412b788b54c832461274f12977c2ae273ba294dccc6e20530f648a432da15a",
+      "Sources/ClimateEnergyBalanceKit/ClimateModels.swift": "62d026ee3bf69a7b4df20e27aa48e85a52a094a038802ef4bb6e7f65d15e0e42",
+      "Sources/ClimateEnergyBalanceKit/ClimateStageRenderer.swift": "ff0b337e26a467e5d1457d8dc0e0c21f23c1b5e92d802801a56017d49dde8408",
+      "Sources/ClimateEnergyBalanceKit/ClimateStageView.swift": "7550459e58b52b9e7dbf2773ea786714623ac075f2d552cebae72683ba952ff4",
+      "Sources/ClimateEnergyBalanceKit/ClimateViewModel.swift": "487ccb54ad8f8f5c38f4497ccdfc4d45202b70a98d5404b0f087b04f97e0812e",
+      "Sources/ClimateEnergyBalanceKit/Components/ClimateHeaderView.swift": "9eae906c009d72a1b86a2c31bf06ef4f8e30f903084771c59cb8a26a7fcea436",
+      "Sources/ClimateEnergyBalanceKit/Components/ControlBarView.swift": "74abbea37d125fab8c3ac34d00d466e233104af87247f581616e63be2c90e957",
+      "Sources/ClimateEnergyBalanceKit/Components/EnergyFlowView.swift": "98909ab311eb41836ba186800eb51f0649f812e7dab1fcfda4b82d1df5df59fc",
+      "Sources/ClimateEnergyBalanceKit/Components/TemperatureLineChartView.swift": "6b7c6dc98414021054837278d533a78ce7a822ebf81d1bc341da8fd0789ff267",
+      "Sources/ClimateEnergyBalanceKit/HomeView.swift": "ec319a00c1f8a819a3d2268d3d5a36a205974321e62634b51256a5a94b3423c2",
+      "Sources/ClimateEnergyBalanceKit/LocalizedInfo.swift": "93497f43156d04ea715494d709089b8bd2b7a885de7c1bac77e7d3f11a735411",
+      "Sources/ClimateEnergyBalanceKit/ModuleContracts.swift": "8d0d6eb47930dc141553f55697f852b03def1cad739ed9f4a879ac43c0f95b17",
+      "Sources/ClimateEnergyBalanceKit/Resources/ar.lproj/Localizable.strings": "b4a09cdaa0708fc646822d42932038699eaf5d1928d54e981334568ecc29979f",
+      "Sources/ClimateEnergyBalanceKit/Resources/bg.lproj/Localizable.strings": "9f4e26dbe06c7c06a5ebc95e11ff2214b7477915699c04fc8617fa8448a3d9f9",
+      "Sources/ClimateEnergyBalanceKit/Resources/ca.lproj/Localizable.strings": "14e7426852c28bb2b7c6510cce81aedc67b0d2b170ecc9dd456e52cfbb2dfbca",
+      "Sources/ClimateEnergyBalanceKit/Resources/cs.lproj/Localizable.strings": "bd706c6fe431353ed69d67c92996bfb2cb154b44c0d589eb20712b04c33e1735",
+      "Sources/ClimateEnergyBalanceKit/Resources/da.lproj/Localizable.strings": "468db6b85149abb83a6a8a1360d5ed80922b0e5148a8ca6979a30121892d241c",
+      "Sources/ClimateEnergyBalanceKit/Resources/de.lproj/Localizable.strings": "9e999588b9fd06a23f9d79c34de64038b58201214f1d1f69da8b4070864c3065",
+      "Sources/ClimateEnergyBalanceKit/Resources/el.lproj/Localizable.strings": "eb5962c441236b3a762b9b03d98feb14660e7d068ebb1b2047f8adf67ba80201",
+      "Sources/ClimateEnergyBalanceKit/Resources/en-AU.lproj/Localizable.strings": "330d9260c09e494ecf768c42e1a31e5f4bd8316483a299c8e14eb7407879755e",
+      "Sources/ClimateEnergyBalanceKit/Resources/en-GB.lproj/Localizable.strings": "330d9260c09e494ecf768c42e1a31e5f4bd8316483a299c8e14eb7407879755e",
+      "Sources/ClimateEnergyBalanceKit/Resources/en-IN.lproj/Localizable.strings": "330d9260c09e494ecf768c42e1a31e5f4bd8316483a299c8e14eb7407879755e",
+      "Sources/ClimateEnergyBalanceKit/Resources/en.lproj/Localizable.strings": "ef03312c55e772fd70600f40578adfe159544bced3575f5db465a6e78d018cda",
+      "Sources/ClimateEnergyBalanceKit/Resources/es-419.lproj/Localizable.strings": "e435914e811d6488c52a64990e0ac1060944dc4f063192d4023ed5c96b53308b",
+      "Sources/ClimateEnergyBalanceKit/Resources/es.lproj/Localizable.strings": "e435914e811d6488c52a64990e0ac1060944dc4f063192d4023ed5c96b53308b",
+      "Sources/ClimateEnergyBalanceKit/Resources/et.lproj/Localizable.strings": "caea1b243ab73844d3ad5dee0e0bc19fe112144e132065111681a6764eb4289b",
+      "Sources/ClimateEnergyBalanceKit/Resources/eu.lproj/Localizable.strings": "f3c0e437a41db37de21b3c9d6538568e9b88bfa3a1cff18631e457625aa624e1",
+      "Sources/ClimateEnergyBalanceKit/Resources/fi.lproj/Localizable.strings": "b35746995a61fe3627577af27ce9754eab0d9783dcc70de2f6bd191a262c0198",
+      "Sources/ClimateEnergyBalanceKit/Resources/fil.lproj/Localizable.strings": "cc896ef7feebf9fb1e21806cd70534b7bcb674905727abd97245088a5c1e7d16",
+      "Sources/ClimateEnergyBalanceKit/Resources/fr.lproj/Localizable.strings": "39608192839f6af49edb2385b70ddc4c488a52513b3099de28b1b69bd4754a7f",
+      "Sources/ClimateEnergyBalanceKit/Resources/gl.lproj/Localizable.strings": "48d3bb067f2918f46f152a9c7f0a67053b43b7b9d31d84a793cd264ee2fe50c0",
+      "Sources/ClimateEnergyBalanceKit/Resources/he.lproj/Localizable.strings": "8f8bb5d3e502cda7f0b0608d00cf54337b9ea14619d177783d42d1d0edb13af6",
+      "Sources/ClimateEnergyBalanceKit/Resources/hi.lproj/Localizable.strings": "b01ec6b944959b050b56ef49438699eff1c0568d77d0932dce597e03f2955212",
+      "Sources/ClimateEnergyBalanceKit/Resources/hr.lproj/Localizable.strings": "01c42e996e97fa741fd0f03f766af2d822c381e4bdf4869f61d77dc4588f45e3",
+      "Sources/ClimateEnergyBalanceKit/Resources/hu.lproj/Localizable.strings": "48f5fbfb91d71951b149bdfdd118ef059e6962ade48fd3c937e750118d37af9b",
+      "Sources/ClimateEnergyBalanceKit/Resources/id.lproj/Localizable.strings": "259148f2951290df944cd43041d370589723aadd553861fa68ce97035632668a",
+      "Sources/ClimateEnergyBalanceKit/Resources/is.lproj/Localizable.strings": "ad828cccbaac2e674fa713aeeb726f6fca5cb08da0b3ed06a63aa9ffe1cea2c9",
+      "Sources/ClimateEnergyBalanceKit/Resources/it.lproj/Localizable.strings": "136b95c26e5e6393b55d9216b2f332dc16e3d4ac6ab31f3f3a763476dfdd22c3",
+      "Sources/ClimateEnergyBalanceKit/Resources/ja.lproj/Localizable.strings": "d448b2a4d5a9993d49a70dc22199a4b774992604d32924125b4277efff779279",
+      "Sources/ClimateEnergyBalanceKit/Resources/ko.lproj/Localizable.strings": "2ad4130bf94c060d75f07fc95e451eac8dd91de7560c4b7eddbf629748078e3d",
+      "Sources/ClimateEnergyBalanceKit/Resources/logo.png": "ec30618087432779088b273eab5724b88191666f1012a878edac35729a17b974",
+      "Sources/ClimateEnergyBalanceKit/Resources/lt.lproj/Localizable.strings": "955175c905a4ad958b761dd41fdee527dceea73a7393287852259db01aad7285",
+      "Sources/ClimateEnergyBalanceKit/Resources/lv.lproj/Localizable.strings": "e3224a964a3ef5ec71fe70518d748e0c4c9fe8ae752b625d3aee7256488df9a5",
+      "Sources/ClimateEnergyBalanceKit/Resources/ms.lproj/Localizable.strings": "ebe67b98aabf5df1c68f23c31999d59749b084add894b5bbe36db7501e5f1b5e",
+      "Sources/ClimateEnergyBalanceKit/Resources/nb.lproj/Localizable.strings": "bb16dcae73931dfbe9818cf85afbf686f0cf5fc22a5ab5328916a8c42ff965b5",
+      "Sources/ClimateEnergyBalanceKit/Resources/nl.lproj/Localizable.strings": "330d9260c09e494ecf768c42e1a31e5f4bd8316483a299c8e14eb7407879755e",
+      "Sources/ClimateEnergyBalanceKit/Resources/pl.lproj/Localizable.strings": "021a2fbec64caf7c6ba780d4c893fa86924bda5f429b7cd63e051104cec6c6ca",
+      "Sources/ClimateEnergyBalanceKit/Resources/pt-BR.lproj/Localizable.strings": "be5606a1855150eb25a91571ebc55a062b4986c4b12211fc089a21207f689cba",
+      "Sources/ClimateEnergyBalanceKit/Resources/pt-PT.lproj/Localizable.strings": "be5606a1855150eb25a91571ebc55a062b4986c4b12211fc089a21207f689cba",
+      "Sources/ClimateEnergyBalanceKit/Resources/pt.lproj/Localizable.strings": "be5606a1855150eb25a91571ebc55a062b4986c4b12211fc089a21207f689cba",
+      "Sources/ClimateEnergyBalanceKit/Resources/ro.lproj/Localizable.strings": "cae79e4020bec26e86a5725f36f95caae335d8b29100b47dbe42daed048684be",
+      "Sources/ClimateEnergyBalanceKit/Resources/ru.lproj/Localizable.strings": "5d8be54051bcba9c667bdc8a5d4fb3d650fde52152e9a43326d1e98f867fba91",
+      "Sources/ClimateEnergyBalanceKit/Resources/sk.lproj/Localizable.strings": "8e972ee969ac27d376a504c183144918aa45fa0d4ac2ff589fc46544f68eb6c0",
+      "Sources/ClimateEnergyBalanceKit/Resources/sl.lproj/Localizable.strings": "b3b14f22ca29ecb59d7f033706a634e31313fa926d9075190095b34ce72f13e9",
+      "Sources/ClimateEnergyBalanceKit/Resources/sr.lproj/Localizable.strings": "c6c5e31e16de80e83a96b2206114730ef4268a0a5981898b36aec73413677394",
+      "Sources/ClimateEnergyBalanceKit/Resources/sv.lproj/Localizable.strings": "fd8350678fbb8bbfa97cae90221657ac963763a8469b0dd70eac07ee89ebbcfa",
+      "Sources/ClimateEnergyBalanceKit/Resources/ta.lproj/Localizable.strings": "4137a5fb8d49e6c623177976693c75f578acc19e2bc2ed70a1d429ff36dd9c40",
+      "Sources/ClimateEnergyBalanceKit/Resources/th.lproj/Localizable.strings": "7ec4714eeb7eaee72b4cc7894fb167b51b1621024e97f917557b0fe53bc35263",
+      "Sources/ClimateEnergyBalanceKit/Resources/tr.lproj/Localizable.strings": "226131ef60dd3359baa8be9f83c76673ed6c07d0d0693442f67db1d15ddfe7db",
+      "Sources/ClimateEnergyBalanceKit/Resources/uk.lproj/Localizable.strings": "9d6c1ae8340e091bdbc6d2c440d329ca49bc0fb0943831c4aadc23d6b4ad8dd0",
+      "Sources/ClimateEnergyBalanceKit/Resources/ur.lproj/Localizable.strings": "da45bc4ad021d7b979fd0d1c83de52f76032baaf1f055d1dbb2ab7e68b8f2abf",
+      "Sources/ClimateEnergyBalanceKit/Resources/vi.lproj/Localizable.strings": "c6bbbcec402601727df853063314277de9166f6f8f6d3636beeaee5a75559c22",
+      "Sources/ClimateEnergyBalanceKit/Resources/zh-HK.lproj/Localizable.strings": "36109ea0882b10b1f28db01a13d72acf98da4298ae3a96b5f197bca249c58bb0",
+      "Sources/ClimateEnergyBalanceKit/Resources/zh-Hans.lproj/Localizable.strings": "b1ee0f41d3f74e0d0576189b5db8248a3b2343fad17692b22fdc4aa27a7fe388",
+      "Sources/ClimateEnergyBalanceKit/Resources/zh-Hant.lproj/Localizable.strings": "36109ea0882b10b1f28db01a13d72acf98da4298ae3a96b5f197bca249c58bb0",
+      "Tests/ClimateEnergyBalanceKitTests/ClimateEnergyBalanceKitTests.swift": "cc1100042699d030aae59878738a2aa21c22a2ba6a93a3d1dc8e095f6fc8d571",
+      "Tests/ClimateEnergyBalanceKitTests/ClimateNativeTests.swift": "e799e7566024fc810fff2a8dc7e84cff5630135a10d07d071bd68f062da8504c",
+      "Tests/ClimateEnergyBalanceKitTests/ClimateScientificTests.swift": "a2496cdf546349d7a55cafce78e4c0e07a617f31eeaa322567eb1f9a20075798"
+    }
+  },
+  "nativeAppTestHost": {
+    "project": "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/ScienceLabNativeHost.xcodeproj",
+    "localFrozenToolCandidate": "/Users/chenlidong/work/apps/sciencetools/Packages/ClimateEnergyBalanceKit",
+    "productionGraphAccepted": false,
+    "scope": "Independent genuine native app loads the local frozen tool candidate and its declared remote Shared revision; not the production remote tool/host graph.",
+    "generatedFileHashes": {
+      "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/App/ScienceLabNativeHostApp.swift": "4bb99fd2e93e78b3497be73ec398724f5821fe5ab03caa80dee4f01a899b7612",
+      "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/ScienceLabNativeHost.xcodeproj/project.pbxproj": "701a2bf9354d71d05993f3cd6cafffe81d6b41e09587cfc385779e65a0a9b751",
+      "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/ScienceLabNativeHost.xcodeproj/xcshareddata/xcschemes/ScienceLabNativeHost.xcscheme": "83551d4c9f8f1bf3f2dd87b829891915f7c2d119e19500de005ce22d4468c74b"
+    }
+  },
+  "actualScene": [
+    "SCIENCE_LAB_NATIVE_APP_SCENES [{\"activationState\":1,\"keyWindowCount\":1,\"windowCount\":1}]"
+  ],
+  "generatedFilesUnchanged": true,
+  "actualGeneratedLock": {
+    "path": "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/ScienceLabNativeHost.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved",
+    "exists": true,
+    "sha256": "305c3384cdf3fea2d818169f640d6b012737780a9aff81df892f2a6873b965fe",
+    "contents": {
+      "originHash": "c4d10e121e288f3d94883abdbe13c550d1d28b1658a6dc572f8c947fe8cdc165",
+      "pins": [
+        {
+          "identity": "appsharekit",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/chenlidongorg/AppShareKit",
+          "state": {
+            "revision": "3a1ed5955dc0ad869dcf2aab1f8947028181644e"
+          }
+        }
+      ],
+      "version": 3
+    }
+  },
+  "realSharedCheckouts": [
+    {
+      "path": "/Users/chenlidong/work/apps/sciencetools/Audit/RolloutNativeSourcePackages/checkouts/AppShareKit",
+      "head": "3a1ed5955dc0ad869dcf2aab1f8947028181644e",
+      "status": []
+    }
+  ],
+  "rawDiagnostics": {
+    "compilerWarnings": [
+      "2026-10-04 01:58:45.387 appintentsmetadataprocessor[96037:13843560] warning: Metadata extraction skipped, no AppIntents.framework dependency found",
+      "/Users/chenlidong/work/apps/sciencetools/Packages/ClimateEnergyBalanceKit/Tests/ClimateEnergyBalanceKitTests/ClimateNativeTests.swift:109:40: warning: weak variable 'weakHost' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]",
+      "    |                                        `- warning: weak variable 'weakHost' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]",
+      "/Users/chenlidong/work/apps/sciencetools/Packages/ClimateEnergyBalanceKit/Tests/ClimateEnergyBalanceKitTests/ClimateNativeTests.swift:111:90: warning: weak variable 'weakView' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]",
+      "    |                                                                                          `- warning: weak variable 'weakView' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]",
+      "/Users/chenlidong/work/apps/sciencetools/Packages/ClimateEnergyBalanceKit/Tests/ClimateEnergyBalanceKitTests/ClimateNativeTests.swift:111:116: warning: weak variable 'weakModel' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]",
+      "    |                                                                                                                    `- warning: weak variable 'weakModel' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]",
+      "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/ScienceLabNativeHost.xcodeproj: ClimateEnergyBalanceKitTests: ld: warning: building for iOS-simulator-15.0, but linking with dylib '@rpath/XCTest.framework/XCTest' which was built for newer version 17.0",
+      "/Users/chenlidong/work/apps/sciencetools/Audit/AppHostedPackages/ClimateEnergyBalanceKit/ScienceLabNativeHost.xcodeproj: ClimateEnergyBalanceKitTests: ld: warning: building for iOS-simulator-15.0, but linking with dylib '@rpath/libXCTestSwiftSupport.dylib' which was built for newer version 17.0",
+      "2026-10-04 01:58:46.055 appintentsmetadataprocessor[96047:13843593] warning: Metadata extraction skipped, no AppIntents.framework dependency found"
+    ],
+    "unbalancedAppearance": 0,
+    "publishingChanges": 0,
+    "cannotAddHandler": 4
+  },
+  "genuinePNGCount": 39,
+  "rootReview": {
+    "package": "ClimateEnergyBalanceKit",
+    "reviewer": "root",
+    "nativeRecord": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/package-run-20261004-015843-apphosted.json",
+    "actualNativePassed": 32,
+    "actualPNGCount": 39,
+    "allContactPagesActuallyOpened": [
+      "contact-page-01.jpg",
+      "contact-page-02.jpg",
+      "contact-page-03.jpg",
+      "contact-page-04.jpg",
+      "contact-page-05.jpg",
+      "contact-page-06.jpg",
+      "contact-page-07.jpg"
+    ],
+    "readableOriginalCropsActuallyOpened": [
+      "Climate-actual-complete-EN-light-2921rows-current-forecast-distinction-SI-realQR-head.png",
+      "Climate-actual-complete-EN-light-2921rows-current-forecast-distinction-SI-realQR-middle.png",
+      "Climate-actual-complete-EN-light-2921rows-current-forecast-distinction-SI-realQR-tail.png",
+      "Climate-actual-complete-ZH-dark-2921rows-current-forecast-distinction-SI-realQR-head.png",
+      "Climate-actual-complete-ZH-dark-2921rows-current-forecast-distinction-SI-realQR-middle.png",
+      "Climate-actual-complete-ZH-dark-2921rows-current-forecast-distinction-SI-realQR-tail.png",
+      "Climate-actual-fractional-light-whole-raster-full-record-head.png",
+      "Climate-actual-fractional-light-whole-raster-full-record-middle.png",
+      "Climate-actual-fractional-light-whole-raster-full-record-tail.png"
+    ],
+    "originalFullHomeActuallyOpened": [
+      "0400E43C-3B0D-4943-8F51-4975D21720C1.png",
+      "778DB222-E301-4DAB-883D-7E16FFA3D00C.png"
+    ],
+    "originalPNGHashes": [
+      {
+        "file": "0400E43C-3B0D-4943-8F51-4975D21720C1.png",
+        "sha256": "b3d2c93ce4c8bd471c5cff205df68b30c2db167ee2822c502af9ebe79a64947c"
+      },
+      {
+        "file": "08B0874B-6832-4B67-8308-1DDA2C29C3A8.png",
+        "sha256": "ae0f5ec0504204481478adb3758bfa52262eae214292852e05270625e8e03dc7"
+      },
+      {
+        "file": "0C547FF7-9F51-493D-8B2E-DB18CBB6E000.png",
+        "sha256": "dbfdb03ab6b72c5121c929b8c72ff022237bd7569105b1256d773284d2bb4a0a"
+      },
+      {
+        "file": "24465EE6-08E1-4894-B126-508D588C1BA3.png",
+        "sha256": "ad76c3aeb9640e475acc144dcd75f23aaa254920f3149742315c5a7c31736b87"
+      },
+      {
+        "file": "3204DBD8-CD50-432B-A220-F9C4B362B779.png",
+        "sha256": "ca988c0382e22d9f0a6bfa4fb14d801b6bad5478c26e8eafd36914b60f823fd8"
+      },
+      {
+        "file": "34C76BAB-9913-41E5-B808-802D16D7279C.png",
+        "sha256": "01317598703d8a4259b7b57f56d9899660a5a6d27dee83b455ebc66edaee8b0b"
+      },
+      {
+        "file": "3D910EDE-665A-4D0E-93A1-9DD2670B122E.png",
+        "sha256": "ff08f55da15ac39879f3b648346575fb823742e1b5e6551729056b7888a1e0a0"
+      },
+      {
+        "file": "459164C8-C139-41B5-8B9C-220F641C5C61.png",
+        "sha256": "63a7ef37530ab17e754a0ef0a226fa09fab727ab912780292381273c4815765f"
+      },
+      {
+        "file": "4684C78C-D8C7-4A33-9C40-CD86EA5477BD.png",
+        "sha256": "ac06dc643a0ca3ff9062c25328ddbbc491e26d17ccdae2e1df5f45d8a67d83d3"
+      },
+      {
+        "file": "469DD02F-7BCB-400D-BBA7-B2F90B30DDFB.png",
+        "sha256": "98cf360233f0484370a66072b8e4f3cc4dae6d03a7835f8d127a1f5029cf8398"
+      },
+      {
+        "file": "47357B28-0FCC-4732-B9B8-FDAF67F85B0E.png",
+        "sha256": "0c996d0589c434063cea328db04ef8ca21db3e91f3c3d853d9c27bdaa0510b5c"
+      },
+      {
+        "file": "54D1CB5F-BD07-4BE6-910C-5C5000A7F479.png",
+        "sha256": "e7df8df93ab54f8faa347131233b7ce590027c84353e240e956dad23cf0c9ca5"
+      },
+      {
+        "file": "551E74DE-A025-48B0-9E1A-D2CF061FFFE9.png",
+        "sha256": "0a6b8a6c8db8ecce820a237d6210e0f2d5f8c96fb478fa55ae5bb2b56b87722b"
+      },
+      {
+        "file": "6C7F0F89-974A-424E-B284-C7F0D43F1EBF.png",
+        "sha256": "aad201352f1a2c7cedf3b7380ccf8f256821fef04844560d25bbd005ffaac5e8"
+      },
+      {
+        "file": "71E9972B-BD3B-476A-AF09-A08B1A843E02.png",
+        "sha256": "a1bd383d4c0d5bcbe69f009ccd0f3fd8522ea149809328ed3ced7a92a07ff4c5"
+      },
+      {
+        "file": "778DB222-E301-4DAB-883D-7E16FFA3D00C.png",
+        "sha256": "ce19cf28738a4b5bee678473733561bddead2ecf0d7f2d70e258f68c0067501e"
+      },
+      {
+        "file": "864F045C-F235-4792-B9EB-D1076F36FD1A.png",
+        "sha256": "e4792df5cea738bbbb43bb391f5420a77c4cc0b227199236ad6fe12d42f89342"
+      },
+      {
+        "file": "8B574225-97C3-48BB-A0E5-B2585D03EE50.png",
+        "sha256": "e921ffa7758153e435d86ae75b032ff1050d9a5d6f5d3225879267b4e1f3acdf"
+      },
+      {
+        "file": "8DA5F3E7-FEB5-4544-B996-AA10852E460D.png",
+        "sha256": "c2e018425ece54520d0c6599dc5d38382ba4228becf97ff876e50c213fe40f88"
+      },
+      {
+        "file": "9B02376A-1692-4284-8355-E73A4A6A8EFD.png",
+        "sha256": "1ae99154a48cf1aef6b020ea8118d95c6d33afa4b86c09ea0c75064841a3f162"
+      },
+      {
+        "file": "9F16CB4B-5A73-4947-8D73-8F3E32D29429.png",
+        "sha256": "68fbb5e037e64bbc497d9fa4a344696cbbff2845862deb0c09ae8e8482c15315"
+      },
+      {
+        "file": "A32393B4-65A0-4FF6-9D27-71BD8B0165DB.png",
+        "sha256": "5cdd2cfa9b1bb05433c7e64ca3ea797f4a9e27ca042e0e33baa1fe6697cd9272"
+      },
+      {
+        "file": "B1054770-4A67-486D-83DB-2AB64BF27929.png",
+        "sha256": "fb9b75f015e2c736b8c0e71547ce5e5911cc4f2582178eeac98882404421f5ad"
+      },
+      {
+        "file": "B1F2CFCC-FF73-44D7-9D22-91CC67A11F2B.png",
+        "sha256": "c4475609fcf61b96bd9829675a37a5c8b173b5d1ff2af848151e191c999b598a"
+      },
+      {
+        "file": "B309671E-0081-4EC4-A98A-F0D20255C754.png",
+        "sha256": "2f46dcae14a33bde5d1bc0a9ca1ace4def6f2479443b5c4c3400314096427741"
+      },
+      {
+        "file": "B334B8CB-0DB8-42D9-B1E4-E3001B8A9122.png",
+        "sha256": "302963413a77bb15deaa3ba2dd597334b5fd711761cbb4e96adf986620b8b6ce"
+      },
+      {
+        "file": "BA68CCAD-0DB2-4F9F-9067-6F1F98C67701.png",
+        "sha256": "98cf360233f0484370a66072b8e4f3cc4dae6d03a7835f8d127a1f5029cf8398"
+      },
+      {
+        "file": "BEB9C0A7-B09E-473D-BBA0-BC69AB64A5DF.png",
+        "sha256": "24ca9d1a9696e2b64b4ff3066e800c81438acd8ae3fcea79eb340d9346be2132"
+      },
+      {
+        "file": "D160270C-4B02-4163-A026-6AF4FF152F3B.png",
+        "sha256": "2f46dcae14a33bde5d1bc0a9ca1ace4def6f2479443b5c4c3400314096427741"
+      },
+      {
+        "file": "DA3C891E-F626-403E-BDFE-3CA10D62D1F4.png",
+        "sha256": "74beb57a1e3440838fd80250db27a6330070f2ccd261abc0262d584a0e0ccf9e"
+      },
+      {
+        "file": "DB38F6E8-6A6A-4F51-94D5-EB3B88807BEA.png",
+        "sha256": "9b6206053976c3157d0d52d930b51a47a01164e0af329f37629fe0bb765047fd"
+      },
+      {
+        "file": "DC1D3ED0-5CAA-4691-A4B5-67A956D2A581.png",
+        "sha256": "39402018be4646016ab6df03fcfd712efe59094dbdf17e2455dc67903914fa21"
+      },
+      {
+        "file": "E4393CEE-45AD-475A-AA89-D08BD7B0C178.png",
+        "sha256": "97408369a1231926592d13732d8663c184f557a48034533e3edeacf29d76cc83"
+      },
+      {
+        "file": "E5337E2B-9560-4C37-A544-D79CF1EDC1B1.png",
+        "sha256": "4b48704af4bfceb454f6060cc871f3cc21324cfc93d16de7173fffc33e00f73c"
+      },
+      {
+        "file": "E5AC0F38-441A-4B83-BD6E-77BE5CE52C5B.png",
+        "sha256": "b029b9c4726b3f780e25b009562bbd2b75e1338bd3454d5159c87351ae70bb1a"
+      },
+      {
+        "file": "E75EABA7-9BF4-4C14-A714-E8388F892C2D.png",
+        "sha256": "e4792df5cea738bbbb43bb391f5420a77c4cc0b227199236ad6fe12d42f89342"
+      },
+      {
+        "file": "F485236F-47A2-4111-8327-8F9BAFB55594.png",
+        "sha256": "682bafa5134e80030bcab230b3b5145b72299d0dafb098bd4e6331d9bd6335d6"
+      },
+      {
+        "file": "F69DBBB0-71A4-4D34-BB8E-8D0B5A0B7AAC.png",
+        "sha256": "33aa17c45c574eae0a3471557888a1dddba399228aa99878e62557ead0827d15"
+      },
+      {
+        "file": "FDD482BE-60F6-46E7-9A51-F5F0411D5022.png",
+        "sha256": "181f917b45acaf6daff42523ee763da8ae7f7d83aee14977789a1bb18c61d61a"
+      }
+    ],
+    "finding": "Actual play icon visible after awaited public controller pause in both traits/portrait and landscape. Single shared fixed anomaly scale, scientific scheme color declaration, original all2921 readable data points and real QR tails verified. Actual integer-ceiled fractional viewport has complete system background. Shared readout may overlap stage and remains draggable by design.",
+    "fullAcceptance": false
+  },
+  "retainedHistory": [
+    "Audit/tests/package-run-20261004-015131-apphosted.json:28pass/4fail;baseline cancellation energy and right boundary fixed in production without lowering tolerances",
+    "Audit/tests/package-run-20261004-015343-apphosted.json:32pass/39PNG but visual pause still queued;sourceStageSnapshot adds actual isRunning and final32 requires awaitfalse"
+  ],
+  "remainingGates": [
+    "Production immutable host operations",
+    "Native touch interruption/window/permissions/share cancellation retry",
+    "Full language native comparison",
+    "User device regression"
+  ],
+  "fullAcceptance": false
+}

@@ -1,153 +1,72 @@
 import UIKit
 
+struct ClimateCaptureText {
+    let text: String
+    let rect: CGRect
+    let fontSize: CGFloat
+}
+struct ClimateCaptureLayout {
+    let canvas: CGSize
+    let stage: CGRect
+    let texts: [ClimateCaptureText]
+    let qrcode: CGRect?
+}
 enum CaptureImageRenderer {
-    static func render(snapshot: ClimateCaptureSnapshot, qrcode: UIImage?) -> UIImage {
-        let size = CGSize(width: 1260, height: 1520)
-        let renderer = UIGraphicsImageRenderer(size: size)
-
-        return renderer.image { context in
-            let cg = context.cgContext
-            UIColor(red: 0.04, green: 0.06, blue: 0.10, alpha: 1).setFill()
-            cg.fill(CGRect(origin: .zero, size: size))
-
-            drawHeader(snapshot: snapshot, qrcode: qrcode)
-            drawCurveCard(snapshot: snapshot, in: cg)
-            drawMetricsCard(snapshot: snapshot, in: cg)
-            drawFooter()
+    static func sanitizedSize(_ size: CGSize) -> CGSize {
+        guard size.width.isFinite, size.height.isFinite, size.width > 0, size.height > 0 else { return .init(width: 360, height: 420) }
+        let factor = min(1, 12000/max(size.width,size.height))
+        return .init(width:max(2,size.width*factor),height:max(2,size.height*factor))
+    }
+    static func stage(snapshot: ClimateStageSnapshot, size: CGSize, userInterfaceStyle: UIUserInterfaceStyle = .light) -> UIImage {
+        let safe = sanitizedSize(size),f=UIGraphicsImageRendererFormat();f.scale=1;f.opaque=true;f.preferredRange = .standard
+        return UIGraphicsImageRenderer(size:safe,format:f).image {ClimateStageRenderer.draw(snapshot:snapshot,in:$0.cgContext,size:safe,trait:.init(userInterfaceStyle:userInterfaceStyle))}
+    }
+    static func layout(snapshot: ClimateCaptureSnapshot, size: CGSize, hasQRCode: Bool) -> ClimateCaptureLayout {
+        let safe=sanitizedSize(size),width=ceil(safe.width),stage=CGRect(x:0,y:0,width:width,height:ceil(safe.height)),margin:CGFloat=18
+        var rows:[ClimateCaptureText]=[],y=stage.maxY+18
+        let summaries=snapshot.texts.isEmpty ? [snapshot.title,snapshot.subtitle,snapshot.presetName] : snapshot.texts
+        for (index,text) in summaries.enumerated() {
+            let font:CGFloat=index==0 ? 22:14
+            let rect=CGRect(x:margin,y:y,width:width-2*margin,height:measured(text,width:width-2*margin,font:font))
+            rows.append(.init(text:text,rect:rect,fontSize:font));y=rect.maxY+8
         }
-    }
-
-    private static func drawHeader(snapshot: ClimateCaptureSnapshot, qrcode: UIImage?) {
-        let titleAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 54, weight: .bold),
-            .foregroundColor: UIColor.white
-        ]
-        let subtitleAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 27, weight: .regular),
-            .foregroundColor: UIColor(white: 0.82, alpha: 1)
-        ]
-
-        snapshot.title.draw(in: CGRect(x: 72, y: 70, width: 900, height: 70), withAttributes: titleAttributes)
-        snapshot.subtitle.draw(in: CGRect(x: 72, y: 142, width: 980, height: 38), withAttributes: subtitleAttributes)
-
-        if let qrcode {
-            qrcode.draw(in: CGRect(x: 1062, y: 74, width: 126, height: 126))
-        }
-    }
-
-    private static func drawCurveCard(snapshot: ClimateCaptureSnapshot, in cg: CGContext) {
-        let card = CGRect(x: 56, y: 232, width: 1148, height: 700)
-        drawCard(card, in: cg)
-        drawText(
-            LocalizedInfo.localized("capture.curve"),
-            frame: CGRect(x: card.minX + 30, y: card.minY + 24, width: 540, height: 44),
-            font: .systemFont(ofSize: 36, weight: .semibold),
-            color: .white
-        )
-
-        let plot = CGRect(x: card.minX + 30, y: card.minY + 92, width: card.width - 60, height: 390)
-        drawSeries(snapshot.baselineSeries, rect: plot, color: UIColor(red: 0.58, green: 0.62, blue: 0.70, alpha: 1))
-        drawSeries(snapshot.scenarioSeries, rect: plot, color: UIColor(red: 0.94, green: 0.38, blue: 0.31, alpha: 1))
-
-        drawText(
-            "\(LocalizedInfo.localized("parameter.solar")) \(String(format: "%.3f×", snapshot.solarMultiplier))   \(LocalizedInfo.localized("parameter.albedo")) \(String(format: "%.2f", snapshot.albedo))",
-            frame: CGRect(x: card.minX + 30, y: card.minY + 516, width: 1040, height: 34),
-            font: .monospacedSystemFont(ofSize: 24, weight: .medium),
-            color: UIColor(white: 0.84, alpha: 1)
-        )
-
-        drawText(
-            "CO₂ \(snapshot.co2Name)   \(LocalizedInfo.localized("parameter.heatCapacity")) \(snapshot.heatCapacityName)   \(LocalizedInfo.localized("parameter.feedback")) \(snapshot.feedbackName)",
-            frame: CGRect(x: card.minX + 30, y: card.minY + 558, width: 1080, height: 34),
-            font: .systemFont(ofSize: 23, weight: .regular),
-            color: UIColor(white: 0.78, alpha: 1)
-        )
-    }
-
-    private static func drawMetricsCard(snapshot: ClimateCaptureSnapshot, in cg: CGContext) {
-        let card = CGRect(x: 56, y: 968, width: 1148, height: 300)
-        drawCard(card, in: cg)
-        drawText(
-            LocalizedInfo.localized("section.metrics"),
-            frame: CGRect(x: card.minX + 30, y: card.minY + 24, width: 520, height: 44),
-            font: .systemFont(ofSize: 36, weight: .semibold),
-            color: .white
-        )
-
-        drawText(
-            "\(LocalizedInfo.localized("metric.equilibrium")): \(String(format: "%.2f°C", snapshot.equilibriumTemperature))",
-            frame: CGRect(x: card.minX + 30, y: card.minY + 94, width: 760, height: 36),
-            font: .monospacedSystemFont(ofSize: 25, weight: .medium),
-            color: UIColor(white: 0.84, alpha: 1)
-        )
-        drawText(
-            "\(LocalizedInfo.localized("metric.timeConstant")): \(String(format: "%.1f y", snapshot.timeConstantYears))",
-            frame: CGRect(x: card.minX + 30, y: card.minY + 146, width: 700, height: 36),
-            font: .monospacedSystemFont(ofSize: 25, weight: .medium),
-            color: UIColor(white: 0.84, alpha: 1)
-        )
-        drawText(
-            "\(LocalizedInfo.localized("section.preset")): \(snapshot.presetName)",
-            frame: CGRect(x: card.minX + 30, y: card.minY + 198, width: 900, height: 36),
-            font: .systemFont(ofSize: 24, weight: .regular),
-            color: UIColor(white: 0.78, alpha: 1)
-        )
-    }
-
-    private static func drawFooter() {
-        drawText(
-            LocalizedInfo.localized("capture.disclaimer"),
-            frame: CGRect(x: 72, y: 1430, width: 1120, height: 34),
-            font: .systemFont(ofSize: 21, weight: .regular),
-            color: UIColor(white: 0.72, alpha: 1)
-        )
-    }
-
-    private static func drawCard(_ rect: CGRect, in cg: CGContext) {
-        UIColor(red: 0.10, green: 0.12, blue: 0.17, alpha: 1).setFill()
-        UIBezierPath(roundedRect: rect, cornerRadius: 28).fill()
-        cg.setStrokeColor(UIColor(white: 1, alpha: 0.06).cgColor)
-        cg.setLineWidth(1)
-        cg.stroke(rect.insetBy(dx: 0.5, dy: 0.5))
-    }
-
-    private static func drawSeries(_ values: [Double], rect: CGRect, color: UIColor) {
-        guard values.count > 1 else { return }
-        let minValue = min(values.min() ?? 0, 0)
-        let maxValue = max(values.max() ?? 0, 0.01)
-        let range = max(0.01, maxValue - minValue)
-
-        UIColor(white: 1, alpha: 0.08).setStroke()
-        UIBezierPath(roundedRect: rect, cornerRadius: 12).stroke()
-
-        let path = UIBezierPath()
-        for index in values.indices {
-            let x = rect.minX + CGFloat(index) / CGFloat(values.count - 1) * rect.width
-            let normalized = (values[index] - minValue) / range
-            let y = rect.maxY - CGFloat(normalized) * rect.height
-            if index == values.startIndex {
-                path.move(to: CGPoint(x: x, y: y))
-            } else {
-                path.addLine(to: CGPoint(x: x, y: y))
+        let columns = width >= 700 ? 3:2,spacing:CGFloat=12,cell=(width-margin*2-spacing*CGFloat(columns-1))/CGFloat(columns)
+        let points=snapshot.points.isEmpty ? snapshot.scenarioSeries.enumerated().map { ClimateSeriesPoint(day:$0.offset,baselineTemp:snapshot.baselineSeries.indices.contains($0.offset) ? snapshot.baselineSeries[$0.offset]:0,scenarioTemp:$0.element) } : snapshot.points
+        for begin in stride(from:0,to:points.count,by:columns) {
+            var line:[ClimateCaptureText]=[]
+            for c in 0..<columns where begin+c<points.count {
+                let p=points[begin+c],text=String(format:"%d,%.12g,%.12g",p.day,p.baselineTemp,p.scenarioTemp)
+                line.append(.init(text:text,rect:CGRect(x:margin+CGFloat(c)*(cell+spacing),y:y,width:cell,height:measured(text,width:cell,font:14)),fontSize:14))
             }
+            y+=(line.map {$0.rect.height}.max() ?? 0)+4;rows+=line
         }
-        color.setStroke()
-        path.lineWidth = 3
-        path.lineJoinStyle = .round
-        path.lineCapStyle = .round
-        path.stroke()
+        var qr:CGRect?
+        if hasQRCode {y+=24;let edge=min(160,max(80,width-68));qr=CGRect(x:(width-edge)/2,y:y+16,width:edge,height:edge);y+=edge+32}
+        return .init(canvas:.init(width:width,height:ceil(y+margin)),stage:stage,texts:rows,qrcode:qr)
     }
-
-    private static func drawText(
-        _ text: String,
-        frame: CGRect,
-        font: UIFont,
-        color: UIColor
-    ) {
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: font,
-            .foregroundColor: color
-        ]
-        text.draw(in: frame, withAttributes: attributes)
+    static func render(snapshot: ClimateCaptureSnapshot, size: CGSize = .init(width:360,height:420), qrcode: UIImage? = nil,
+                       userInterfaceStyle: UIUserInterfaceStyle = .light, stageImage: UIImage? = nil) -> UIImage {
+        let safe=sanitizedSize(size),f=UIGraphicsImageRendererFormat();f.scale=1;f.opaque=true;f.preferredRange = .standard
+        let l=layout(snapshot:snapshot,size:safe,hasQRCode:qrcode != nil),trait=UITraitCollection(userInterfaceStyle:userInterfaceStyle)
+        var image=UIImage()
+        trait.performAsCurrent {
+            image=UIGraphicsImageRenderer(size:l.canvas,format:f).image {context in
+                let cg=context.cgContext;cg.setFillColor(UIColor.systemBackground.resolvedColor(with:trait).cgColor);cg.fill(.init(origin:.zero,size:l.canvas))
+                let points=snapshot.points.isEmpty ? [ClimateSeriesPoint(day:0,baselineTemp:0,scenarioTemp:0)] : snapshot.points
+                let state=snapshot.stage ?? .init(points:points,visibleDay:points.last!.day,probeDay:nil,localeIdentifier:"en",parameters:ClimatePreset.baseline.parameters)
+                let native=stageImage ?? stage(snapshot:state,size:safe,userInterfaceStyle:userInterfaceStyle)
+                cg.interpolationQuality = .none
+                if let nativeCG=native.cgImage {UIImage(cgImage:nativeCG).draw(in:l.stage)}
+                for row in l.texts {(row.text as NSString).draw(in:row.rect,withAttributes:attributes(font:row.fontSize))}
+                if let qrcode,let qr=l.qrcode {UIColor.white.setFill();cg.fill(qr.insetBy(dx:-16,dy:-16));cg.interpolationQuality = .none;qrcode.draw(in:qr)}
+            }
+        };return image
+    }
+    static func attributes(font:CGFloat) ->[NSAttributedString.Key:Any] {
+        let p=NSMutableParagraphStyle();p.lineBreakMode = .byWordWrapping
+        return [.font:UIFont.systemFont(ofSize:font),.foregroundColor:UIColor.label,.paragraphStyle:p]
+    }
+    private static func measured(_ text:String,width:CGFloat,font:CGFloat)->CGFloat {
+        ceil((text as NSString).boundingRect(with:.init(width:width,height:.greatestFiniteMagnitude),options:[.usesLineFragmentOrigin,.usesFontLeading],attributes:attributes(font:font),context:nil).height)+3
     }
 }

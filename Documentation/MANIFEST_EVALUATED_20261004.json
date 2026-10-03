@@ -1,0 +1,127 @@
+{
+  "cLanguageStandard" : null,
+  "cxxLanguageStandard" : null,
+  "defaultLocalization" : "en",
+  "dependencies" : [
+    {
+      "sourceControl" : [
+        {
+          "identity" : "appsharekit",
+          "location" : {
+            "remote" : [
+              {
+                "urlString" : "https://github.com/chenlidongorg/AppShareKit.git"
+              }
+            ]
+          },
+          "productFilter" : null,
+          "requirement" : {
+            "revision" : [
+              "3a1ed5955dc0ad869dcf2aab1f8947028181644e"
+            ]
+          },
+          "traits" : [
+            {
+              "name" : "default"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name" : "ClimateEnergyBalanceKit",
+  "packageKind" : {
+    "root" : [
+      "/Users/chenlidong/work/apps/sciencetools/Packages/ClimateEnergyBalanceKit"
+    ]
+  },
+  "pkgConfig" : null,
+  "platforms" : [
+    {
+      "options" : [
+
+      ],
+      "platformName" : "ios",
+      "version" : "15.0"
+    }
+  ],
+  "products" : [
+    {
+      "name" : "ClimateEnergyBalanceKit",
+      "settings" : [
+
+      ],
+      "targets" : [
+        "ClimateEnergyBalanceKit"
+      ],
+      "type" : {
+        "library" : [
+          "automatic"
+        ]
+      }
+    }
+  ],
+  "providers" : null,
+  "swiftLanguageVersions" : null,
+  "targets" : [
+    {
+      "dependencies" : [
+        {
+          "product" : [
+            "ScienceLabUI",
+            "AppShareKit",
+            null,
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "ClimateEnergyBalanceKit",
+      "packageAccess" : true,
+      "resources" : [
+        {
+          "path" : "Resources",
+          "rule" : {
+            "process" : {
+
+            }
+          }
+        }
+      ],
+      "settings" : [
+
+      ],
+      "type" : "regular"
+    },
+    {
+      "dependencies" : [
+        {
+          "byName" : [
+            "ClimateEnergyBalanceKit",
+            null
+          ]
+        }
+      ],
+      "exclude" : [
+
+      ],
+      "name" : "ClimateEnergyBalanceKitTests",
+      "packageAccess" : true,
+      "resources" : [
+
+      ],
+      "settings" : [
+
+      ],
+      "type" : "test"
+    }
+  ],
+  "toolsVersion" : {
+    "_version" : "5.9.0"
+  },
+  "traits" : [
+
+  ]
+}

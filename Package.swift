@@ -13,9 +13,13 @@ let package = Package(
             targets: ["ClimateEnergyBalanceKit"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/chenlidongorg/AppShareKit.git", revision: "3a1ed5955dc0ad869dcf2aab1f8947028181644e")
+    ],
     targets: [
         .target(
             name: "ClimateEnergyBalanceKit",
+            dependencies: [.product(name: "ScienceLabUI", package: "AppShareKit")],
             resources: [
                 .process("Resources")
             ]

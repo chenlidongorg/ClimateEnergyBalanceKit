@@ -41,6 +41,19 @@ public enum LocalizedInfo {
         return key
     }
 
+    static var activeLocale: String { Bundle.module.preferredLocalizations.first ?? "en" }
+
+    static func localized(_ key: String, localeIdentifier: String) -> String {
+        let candidates = [localeIdentifier.replacingOccurrences(of: "_", with: "-"), localeIdentifier.hasPrefix("zh") ? "zh-Hans" : localeIdentifier.split(separator: "-").first.map(String.init) ?? "en", "en"]
+        for name in candidates {
+            if let path = Bundle.module.path(forResource: name, ofType: "lproj"), let bundle = Bundle(path: path) {
+                let value = bundle.localizedString(forKey: key, value: nil, table: nil)
+                if value != key { return value }
+            }
+        }
+        return key
+    }
+
     private static func generatedPlaceholder() -> UIImage {
         let size = CGSize(width: 240, height: 240)
         let renderer = UIGraphicsImageRenderer(size: size)

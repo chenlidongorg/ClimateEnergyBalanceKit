@@ -1,0 +1,269 @@
+{
+  "locales": {
+    "ar.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "bg.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ca.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "cs.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "da.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "de.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "el.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "en-AU.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "en-GB.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "en-IN.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "en.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 14,
+      "newScientificNativeVerified": true
+    },
+    "es-419.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "es.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "et.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "eu.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "fi.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "fil.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "fr.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "gl.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "he.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "hi.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "hr.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "hu.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "id.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "is.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "it.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ja.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ko.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "lt.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "lv.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ms.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "nb.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "nl.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "pl.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "pt-BR.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "pt-PT.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "pt.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ro.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ru.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "sk.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "sl.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "sr.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "sv.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ta.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "th.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "tr.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "uk.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "ur.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "vi.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "zh-HK.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    },
+    "zh-Hans.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 14,
+      "newScientificNativeVerified": true
+    },
+    "zh-Hant.lproj": {
+      "originalValuesPreserved": 48,
+      "newScientificKeys": 0,
+      "newScientificNativeVerified": false
+    }
+  },
+  "newScientificProse": [
+    "en",
+    "zh-Hans"
+  ],
+  "fallbackScope": "New scientific prose exists in en and zh-Hans. English regional or nonChinese unfilled keys use explicit English fallback;zh-Hant/zh-HK unfilled scientific keys fall through to simplified Chinese. Old 48 keys in all52locales preserved. Only EN/ZH report rendering was actually checked;full regional-language Home verification remains."
+}

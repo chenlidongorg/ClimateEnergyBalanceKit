@@ -1,92 +1,56 @@
 import Foundation
 
+/// Linear global-mean anomaly model, not an absolute-temperature climate forecast.
+/// C is expressed in W year m^-2 K^-1; one model year is exactly 365 days.
 enum ClimateEnergySimulator {
-    private static let meanIncomingSolar = 340.0
-    private static let baselineAlbedo = 0.30
-    private static let baselineFeedbackLambda = 1.10
-    private static let baselineHeatCapacity = 10.0
-    private static let dtYears = 1.0 / 365.0
+    static let secondsPerModelYear = 365.0 * 24 * 3600
+    static let meanIncomingSolar = 340.0
+    static let baselineAbsorbed = 238.0
+    static let doublingForcing = 3.7 // Original rounded teaching coefficient, not AR6 ERF.
+    static let defaultHorizonDays = 365 * 8
 
-    static func simulate(
-        scenario: ClimateParameters,
-        horizonDays: Int = 365 * 8
-    ) -> ClimateSimulationResult {
-        let baseline = ClimateParameters(
-            solarMultiplier: 1.0,
-            albedo: baselineAlbedo,
-            co2Level: .x1,
-            heatCapacity: .medium,
-            feedbackMode: .standard
-        )
-
-        let baselineSeries = integrateTemperature(parameters: baseline, horizonDays: horizonDays)
-        let scenarioSeries = integrateTemperature(parameters: scenario, horizonDays: horizonDays)
-        let metrics = computeMetrics(parameters: scenario, currentTemperature: scenarioSeries.last ?? 0)
-
-        let points = (0 ... horizonDays).map { day in
-            ClimateSeriesPoint(
-                day: day,
-                baselineTemp: baselineSeries[day],
-                scenarioTemp: scenarioSeries[day]
-            )
-        }
-
-        return ClimateSimulationResult(points: points, metrics: metrics)
+    static func normalized(_ value: ClimateParameters) -> ClimateParameters {
+        var p = value
+        p.solarMultiplier = p.solarMultiplier.isFinite ? min(max(p.solarMultiplier, 0), 4) : 1
+        p.albedo = p.albedo.isFinite ? min(max(p.albedo, 0), 1) : 0.3
+        return p
     }
 
-    private static func integrateTemperature(parameters: ClimateParameters, horizonDays: Int) -> [Double] {
-        let forcing = totalForcing(parameters)
-        let lambda = parameters.feedbackMode.lambda
-        let capacity = parameters.heatCapacity.value
-
-        var temperature = 0.0
-        var series = Array(repeating: 0.0, count: horizonDays + 1)
-        series[0] = 0
-
-        if horizonDays == 0 {
-            return series
+    static func simulate(scenario: ClimateParameters, horizonDays: Int = defaultHorizonDays) -> ClimateSimulationResult {
+        let p = normalized(scenario)
+        // Bounded internal allocation; the shipped finite teaching record remains 8 years.
+        let last = min(max(0, horizonDays), 365 * 200)
+        let forcing = totalForcing(p), lambda = p.feedbackMode.lambda, c = p.heatCapacity.value
+        let points = (0...last).map { day in
+            ClimateSeriesPoint(day: day, baselineTemp: 0,
+                scenarioTemp: forcing / lambda * -expm1(-lambda * Double(day) / (365 * c)))
         }
-
-        for day in 1 ... horizonDays {
-            let tendency = (forcing - lambda * temperature) / capacity
-            temperature += tendency * dtYears
-            series[day] = temperature
-        }
-
-        return series
+        // Summary metrics refer to the terminal forecast. Live readouts compute their own day.
+        return .init(points: points, metrics: metrics(parameters: p, temperature: points.last!.scenarioTemp))
     }
 
-    private static func computeMetrics(parameters: ClimateParameters, currentTemperature: Double) -> ClimateMetrics {
-        let absorbed = meanIncomingSolar * parameters.solarMultiplier * (1 - parameters.albedo)
-        let forcing = totalForcing(parameters)
-        let co2Forcing = forcingFromCO2(parameters.co2Level)
-        let lambda = parameters.feedbackMode.lambda
-        let outgoing = absorbed - forcing + lambda * currentTemperature
-        let equilibrium = forcing / lambda
-        let tau = parameters.heatCapacity.value / lambda
-
-        return ClimateMetrics(
-            absorbedShortwave: absorbed,
-            outgoingLongwave: outgoing,
-            netForcing: forcing,
-            co2Forcing: co2Forcing,
-            equilibriumTemperature: equilibrium,
-            timeConstantYears: tau
-        )
+    static func metrics(parameters: ClimateParameters, temperature: Double) -> ClimateMetrics {
+        let p = normalized(parameters), t = temperature.isFinite ? temperature : 0
+        let co2 = doublingForcing * log2(p.co2Level.rawValue)
+        let absorbed = baselineAbsorbed + solarForcing(p)
+        return .init(absorbedShortwave: absorbed,
+            outgoingLongwave: baselineAbsorbed - co2 + p.feedbackMode.lambda * t,
+            netForcing: solarForcing(p) + co2, co2Forcing: co2,
+            equilibriumTemperature: (solarForcing(p) + co2) / p.feedbackMode.lambda,
+            timeConstantYears: p.heatCapacity.value / p.feedbackMode.lambda)
     }
 
     static func totalForcing(_ parameters: ClimateParameters) -> Double {
-        forcingFromSolarAndAlbedo(parameters.solarMultiplier, parameters.albedo) + forcingFromCO2(parameters.co2Level)
+        let p = normalized(parameters)
+        return solarForcing(p) + doublingForcing * log2(p.co2Level.rawValue)
     }
 
-    private static func forcingFromSolarAndAlbedo(_ solarMultiplier: Double, _ albedo: Double) -> Double {
-        let baselineAbsorbed = meanIncomingSolar * (1 - baselineAlbedo)
-        let absorbed = meanIncomingSolar * solarMultiplier * (1 - albedo)
-        return absorbed - baselineAbsorbed
+    /// Algebraically identical to 340 m(1−a)−238, with exact reference cancellation.
+    private static func solarForcing(_ p: ClimateParameters) -> Double {
+        meanIncomingSolar * ((p.solarMultiplier - 1) * (1 - p.albedo) + (0.3 - p.albedo))
     }
 
-    private static func forcingFromCO2(_ co2Level: CO2Level) -> Double {
-        guard co2Level.rawValue > 0 else { return 0 }
-        return 3.7 * log2(co2Level.rawValue)
+    static func heatContent(parameters: ClimateParameters, temperature: Double) -> Double {
+        parameters.heatCapacity.value * secondsPerModelYear * temperature
     }
 }

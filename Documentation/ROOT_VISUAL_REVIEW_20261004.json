@@ -1,0 +1,191 @@
+{
+  "package": "ClimateEnergyBalanceKit",
+  "reviewer": "root",
+  "nativeRecord": "/Users/chenlidong/work/apps/sciencetools/Audit/tests/package-run-20261004-015843-apphosted.json",
+  "actualNativePassed": 32,
+  "actualPNGCount": 39,
+  "allContactPagesActuallyOpened": [
+    "contact-page-01.jpg",
+    "contact-page-02.jpg",
+    "contact-page-03.jpg",
+    "contact-page-04.jpg",
+    "contact-page-05.jpg",
+    "contact-page-06.jpg",
+    "contact-page-07.jpg"
+  ],
+  "readableOriginalCropsActuallyOpened": [
+    "Climate-actual-complete-EN-light-2921rows-current-forecast-distinction-SI-realQR-head.png",
+    "Climate-actual-complete-EN-light-2921rows-current-forecast-distinction-SI-realQR-middle.png",
+    "Climate-actual-complete-EN-light-2921rows-current-forecast-distinction-SI-realQR-tail.png",
+    "Climate-actual-complete-ZH-dark-2921rows-current-forecast-distinction-SI-realQR-head.png",
+    "Climate-actual-complete-ZH-dark-2921rows-current-forecast-distinction-SI-realQR-middle.png",
+    "Climate-actual-complete-ZH-dark-2921rows-current-forecast-distinction-SI-realQR-tail.png",
+    "Climate-actual-fractional-light-whole-raster-full-record-head.png",
+    "Climate-actual-fractional-light-whole-raster-full-record-middle.png",
+    "Climate-actual-fractional-light-whole-raster-full-record-tail.png"
+  ],
+  "originalFullHomeActuallyOpened": [
+    "0400E43C-3B0D-4943-8F51-4975D21720C1.png",
+    "778DB222-E301-4DAB-883D-7E16FFA3D00C.png"
+  ],
+  "originalPNGHashes": [
+    {
+      "file": "0400E43C-3B0D-4943-8F51-4975D21720C1.png",
+      "sha256": "b3d2c93ce4c8bd471c5cff205df68b30c2db167ee2822c502af9ebe79a64947c"
+    },
+    {
+      "file": "08B0874B-6832-4B67-8308-1DDA2C29C3A8.png",
+      "sha256": "ae0f5ec0504204481478adb3758bfa52262eae214292852e05270625e8e03dc7"
+    },
+    {
+      "file": "0C547FF7-9F51-493D-8B2E-DB18CBB6E000.png",
+      "sha256": "dbfdb03ab6b72c5121c929b8c72ff022237bd7569105b1256d773284d2bb4a0a"
+    },
+    {
+      "file": "24465EE6-08E1-4894-B126-508D588C1BA3.png",
+      "sha256": "ad76c3aeb9640e475acc144dcd75f23aaa254920f3149742315c5a7c31736b87"
+    },
+    {
+      "file": "3204DBD8-CD50-432B-A220-F9C4B362B779.png",
+      "sha256": "ca988c0382e22d9f0a6bfa4fb14d801b6bad5478c26e8eafd36914b60f823fd8"
+    },
+    {
+      "file": "34C76BAB-9913-41E5-B808-802D16D7279C.png",
+      "sha256": "01317598703d8a4259b7b57f56d9899660a5a6d27dee83b455ebc66edaee8b0b"
+    },
+    {
+      "file": "3D910EDE-665A-4D0E-93A1-9DD2670B122E.png",
+      "sha256": "ff08f55da15ac39879f3b648346575fb823742e1b5e6551729056b7888a1e0a0"
+    },
+    {
+      "file": "459164C8-C139-41B5-8B9C-220F641C5C61.png",
+      "sha256": "63a7ef37530ab17e754a0ef0a226fa09fab727ab912780292381273c4815765f"
+    },
+    {
+      "file": "4684C78C-D8C7-4A33-9C40-CD86EA5477BD.png",
+      "sha256": "ac06dc643a0ca3ff9062c25328ddbbc491e26d17ccdae2e1df5f45d8a67d83d3"
+    },
+    {
+      "file": "469DD02F-7BCB-400D-BBA7-B2F90B30DDFB.png",
+      "sha256": "98cf360233f0484370a66072b8e4f3cc4dae6d03a7835f8d127a1f5029cf8398"
+    },
+    {
+      "file": "47357B28-0FCC-4732-B9B8-FDAF67F85B0E.png",
+      "sha256": "0c996d0589c434063cea328db04ef8ca21db3e91f3c3d853d9c27bdaa0510b5c"
+    },
+    {
+      "file": "54D1CB5F-BD07-4BE6-910C-5C5000A7F479.png",
+      "sha256": "e7df8df93ab54f8faa347131233b7ce590027c84353e240e956dad23cf0c9ca5"
+    },
+    {
+      "file": "551E74DE-A025-48B0-9E1A-D2CF061FFFE9.png",
+      "sha256": "0a6b8a6c8db8ecce820a237d6210e0f2d5f8c96fb478fa55ae5bb2b56b87722b"
+    },
+    {
+      "file": "6C7F0F89-974A-424E-B284-C7F0D43F1EBF.png",
+      "sha256": "aad201352f1a2c7cedf3b7380ccf8f256821fef04844560d25bbd005ffaac5e8"
+    },
+    {
+      "file": "71E9972B-BD3B-476A-AF09-A08B1A843E02.png",
+      "sha256": "a1bd383d4c0d5bcbe69f009ccd0f3fd8522ea149809328ed3ced7a92a07ff4c5"
+    },
+    {
+      "file": "778DB222-E301-4DAB-883D-7E16FFA3D00C.png",
+      "sha256": "ce19cf28738a4b5bee678473733561bddead2ecf0d7f2d70e258f68c0067501e"
+    },
+    {
+      "file": "864F045C-F235-4792-B9EB-D1076F36FD1A.png",
+      "sha256": "e4792df5cea738bbbb43bb391f5420a77c4cc0b227199236ad6fe12d42f89342"
+    },
+    {
+      "file": "8B574225-97C3-48BB-A0E5-B2585D03EE50.png",
+      "sha256": "e921ffa7758153e435d86ae75b032ff1050d9a5d6f5d3225879267b4e1f3acdf"
+    },
+    {
+      "file": "8DA5F3E7-FEB5-4544-B996-AA10852E460D.png",
+      "sha256": "c2e018425ece54520d0c6599dc5d38382ba4228becf97ff876e50c213fe40f88"
+    },
+    {
+      "file": "9B02376A-1692-4284-8355-E73A4A6A8EFD.png",
+      "sha256": "1ae99154a48cf1aef6b020ea8118d95c6d33afa4b86c09ea0c75064841a3f162"
+    },
+    {
+      "file": "9F16CB4B-5A73-4947-8D73-8F3E32D29429.png",
+      "sha256": "68fbb5e037e64bbc497d9fa4a344696cbbff2845862deb0c09ae8e8482c15315"
+    },
+    {
+      "file": "A32393B4-65A0-4FF6-9D27-71BD8B0165DB.png",
+      "sha256": "5cdd2cfa9b1bb05433c7e64ca3ea797f4a9e27ca042e0e33baa1fe6697cd9272"
+    },
+    {
+      "file": "B1054770-4A67-486D-83DB-2AB64BF27929.png",
+      "sha256": "fb9b75f015e2c736b8c0e71547ce5e5911cc4f2582178eeac98882404421f5ad"
+    },
+    {
+      "file": "B1F2CFCC-FF73-44D7-9D22-91CC67A11F2B.png",
+      "sha256": "c4475609fcf61b96bd9829675a37a5c8b173b5d1ff2af848151e191c999b598a"
+    },
+    {
+      "file": "B309671E-0081-4EC4-A98A-F0D20255C754.png",
+      "sha256": "2f46dcae14a33bde5d1bc0a9ca1ace4def6f2479443b5c4c3400314096427741"
+    },
+    {
+      "file": "B334B8CB-0DB8-42D9-B1E4-E3001B8A9122.png",
+      "sha256": "302963413a77bb15deaa3ba2dd597334b5fd711761cbb4e96adf986620b8b6ce"
+    },
+    {
+      "file": "BA68CCAD-0DB2-4F9F-9067-6F1F98C67701.png",
+      "sha256": "98cf360233f0484370a66072b8e4f3cc4dae6d03a7835f8d127a1f5029cf8398"
+    },
+    {
+      "file": "BEB9C0A7-B09E-473D-BBA0-BC69AB64A5DF.png",
+      "sha256": "24ca9d1a9696e2b64b4ff3066e800c81438acd8ae3fcea79eb340d9346be2132"
+    },
+    {
+      "file": "D160270C-4B02-4163-A026-6AF4FF152F3B.png",
+      "sha256": "2f46dcae14a33bde5d1bc0a9ca1ace4def6f2479443b5c4c3400314096427741"
+    },
+    {
+      "file": "DA3C891E-F626-403E-BDFE-3CA10D62D1F4.png",
+      "sha256": "74beb57a1e3440838fd80250db27a6330070f2ccd261abc0262d584a0e0ccf9e"
+    },
+    {
+      "file": "DB38F6E8-6A6A-4F51-94D5-EB3B88807BEA.png",
+      "sha256": "9b6206053976c3157d0d52d930b51a47a01164e0af329f37629fe0bb765047fd"
+    },
+    {
+      "file": "DC1D3ED0-5CAA-4691-A4B5-67A956D2A581.png",
+      "sha256": "39402018be4646016ab6df03fcfd712efe59094dbdf17e2455dc67903914fa21"
+    },
+    {
+      "file": "E4393CEE-45AD-475A-AA89-D08BD7B0C178.png",
+      "sha256": "97408369a1231926592d13732d8663c184f557a48034533e3edeacf29d76cc83"
+    },
+    {
+      "file": "E5337E2B-9560-4C37-A544-D79CF1EDC1B1.png",
+      "sha256": "4b48704af4bfceb454f6060cc871f3cc21324cfc93d16de7173fffc33e00f73c"
+    },
+    {
+      "file": "E5AC0F38-441A-4B83-BD6E-77BE5CE52C5B.png",
+      "sha256": "b029b9c4726b3f780e25b009562bbd2b75e1338bd3454d5159c87351ae70bb1a"
+    },
+    {
+      "file": "E75EABA7-9BF4-4C14-A714-E8388F892C2D.png",
+      "sha256": "e4792df5cea738bbbb43bb391f5420a77c4cc0b227199236ad6fe12d42f89342"
+    },
+    {
+      "file": "F485236F-47A2-4111-8327-8F9BAFB55594.png",
+      "sha256": "682bafa5134e80030bcab230b3b5145b72299d0dafb098bd4e6331d9bd6335d6"
+    },
+    {
+      "file": "F69DBBB0-71A4-4D34-BB8E-8D0B5A0B7AAC.png",
+      "sha256": "33aa17c45c574eae0a3471557888a1dddba399228aa99878e62557ead0827d15"
+    },
+    {
+      "file": "FDD482BE-60F6-46E7-9A51-F5F0411D5022.png",
+      "sha256": "181f917b45acaf6daff42523ee763da8ae7f7d83aee14977789a1bb18c61d61a"
+    }
+  ],
+  "finding": "Actual play icon visible after awaited public controller pause in both traits/portrait and landscape. Single shared fixed anomaly scale, scientific scheme color declaration, original all2921 readable data points and real QR tails verified. Actual integer-ceiled fractional viewport has complete system background. Shared readout may overlap stage and remains draggable by design.",
+  "fullAcceptance": false
+}

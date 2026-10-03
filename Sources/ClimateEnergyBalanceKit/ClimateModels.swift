@@ -174,6 +174,8 @@ struct ClimateMetrics {
     let co2Forcing: Double
     let equilibriumTemperature: Double
     let timeConstantYears: Double
+
+    var netImbalance: Double { absorbedShortwave - outgoingLongwave }
 }
 
 struct ClimateSimulationResult {
@@ -206,4 +208,17 @@ struct ClimateCaptureSnapshot {
     let timeConstantYears: Double
     let scenarioSeries: [Double]
     let baselineSeries: [Double]
+    var stage: ClimateStageSnapshot? = nil
+    var texts: [String] = []
+    var points: [ClimateSeriesPoint] = []
+}
+
+struct ClimateStageSnapshot {
+    let points: [ClimateSeriesPoint]
+    let visibleDay: Int
+    let probeDay: Int?
+    let localeIdentifier: String
+    let parameters: ClimateParameters
+    var isRunning = false
+    var observedDay: Int { min(max(0, probeDay ?? visibleDay), points.last?.day ?? 0) }
 }
